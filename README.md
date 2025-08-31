@@ -62,8 +62,6 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-> **Note:** Edit the `.env` files in both `backend/` and `frontend/` directories to configure your environment variables according to your setup requirements.
-
 ### 4. Start the Services
 
 Launch the backend and frontend services using Docker Compose:
