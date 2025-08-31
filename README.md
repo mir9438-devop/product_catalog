@@ -1,6 +1,30 @@
 # Product Catalog
 
-A modern product catalog application built with a microservices architecture using Docker containers.
+A modern product catalog application.
+
+## Technologies Used
+
+### Backend
+- **Framework:** NestJS
+- **Database:** PostgreSQL
+- **Node Version:** 22.18.0
+- **Architecture:** Backend and database running in the same container for simplified deployment
+
+### Frontend
+- **Framework:** Next.js
+- **State Management:** Redux
+- **Node Version:** 18.20.2
+- **Architecture:** Running in a separate container
+
+### Why Docker?
+
+This project is fully containerized to eliminate common development issues such as:
+- Node version conflicts
+- Database setup complications
+- Migration-related errors
+- Environment-specific dependencies
+
+By dockerizing the entire application, you can run the project seamlessly regardless of your local machine configuration.
 
 ## Prerequisites
 
