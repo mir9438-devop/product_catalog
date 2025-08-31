@@ -61,7 +61,7 @@ export default function Home() {
       {/* Header Section */}
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
             Kitchen<span className="text-[#fca311]">365</span> Store
           </h1>
           <p className="text-gray-600">DESIGN. SELL. GROW</p>
@@ -113,7 +113,7 @@ export default function Home() {
 
         <button
           onClick={handleSearch}
-          className="bg-[#fca311] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+          className="bg-[#fca311] text-white px-4 py-2 rounded-lg hover:bg-[#e5940f] transition-colors cursor-pointer"
         >
           Search
         </button>

@@ -57,12 +57,12 @@ export default function Login() {
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           {/* Logo and Header */}
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            {/* <h1 className="text-4xl font-bold text-gray-900 mb-2">
               Kitchen365 Login
-            </h1>
-            {/* <h2 className="text-2xl font-semibold text-gray-700 mb-2">
-              Welcome back
-            </h2> */}
+            </h1> */}
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            Kitchen<span className="text-[#fca311]">365</span> Login
+          </h1>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default function Login() {
                   className={`w-full px-4 py-3 border rounded-lg transition-colors ${
                     errors.email
                       ? "border-red-300 focus:ring-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                      : "border-gray-300 focus:ring-[#fca311] focus:border-[#fca311]"
                   }bg-white text-black`}
                   placeholder="Enter your email"
                   disabled={isSubmitting}
@@ -113,7 +113,7 @@ export default function Login() {
                     className={`w-full px-4 py-3 pr-12 border rounded-lg transition-colors ${
                       errors.password
                         ? "border-red-300 focus:ring-red-500 focus:border-red-500"
-                        : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                        : "border-gray-300 focus:ring-[#fca311] focus:border-[#fca311]"
                     }bg-white text-black`}
                     placeholder="Enter your password"
                     disabled={isSubmitting}
@@ -195,8 +195,7 @@ export default function Login() {
               <div>
                 <button
                   type="submit"
-                  //   disabled={isSubmitting}
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
+                  className="bg-[#fca311] hover:bg-[#e5940f] w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#fca311] disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">
@@ -245,7 +244,7 @@ export default function Login() {
               <div className="mt-6 text-center">
                 <Link
                   href="/auth/register"
-                  className="text-blue-600 hover:text-blue-500 font-medium transition-colors"
+                  className="text-[#fca311] hover:text-[#e5940f] font-medium transition-colors"
                 >
                   Create your account
                 </Link>
@@ -254,16 +253,16 @@ export default function Login() {
           </div>
 
           {/* Demo Credentials */}
-          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h3 className="text-sm font-medium text-blue-800 mb-2">
+          <div className="mt-6 bg-[#fff5e6] border border-[#ffd8a8] rounded-lg p-4">
+            <h3 className="text-sm font-medium text-black mb-2">
               Demo Credentials
             </h3>
-            <div className="text-sm text-blue-700 space-y-1">
+            <div className="text-sm text-[#f76707] space-y-1">
               <p>
-                <strong>Email:</strong> demo@kitchen365.com
+                <span className="font-semibold">Email:</span> demo@kitchen365.com
               </p>
               <p>
-                <strong>Password:</strong> demo123
+                <span className="font-semibold">Password:</span> demo123
               </p>
             </div>
           </div>

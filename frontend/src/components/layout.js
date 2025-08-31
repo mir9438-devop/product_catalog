@@ -10,7 +10,7 @@ export default function Layout({
   const router = useRouter();
 
   // Hide header on login page
-  // const hideHeader = router.pathname?.startsWith("/auth/login");
+  const hideHeader = router.pathname?.startsWith("/auth/login") || router.pathname?.startsWith("/auth/register");
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Layout({
       </Head>
 
       <div className="min-h-screen bg-gray-50">
-        {<Header />}
+        {!hideHeader && <Header />}
         <div className="h-4" />
         {/* <main className="container mx-auto px-4 py-8 max-w-6xl"> */}
         <main className="container mx-auto px-4 py-8 max-w-6xl pt-16">

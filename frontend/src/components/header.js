@@ -5,44 +5,47 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
 export default function Header() {
-  const token = useSelector((state) => state.user.loginToken);
-
+  const [token, setToken] = useState(null);
   const router = useRouter();
-  const isLoginPage = router.pathname === "/auth/login" || router.pathname === "/auth/register";
 
   const clearLoginToken = () => {
-    localStorage.clear();
     localStorage.removeItem("token");
     router.push("/auth/login");
   };
 
+  useEffect(() => {
+    // runs only in the browser
+    const savedToken = localStorage.getItem("token");
+    setToken(savedToken);
+  }, []);
+
   return (
     // <header className="bg-white shadow-sm border-b border-gray-200">
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <header className="fixed top-0 left-0 w-full z-50  bg-white shadow-md">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+              className="text-3xl font-bold text-gray-900 hover:text-gray-600 transition-colors"
             >
-              Kitchen <span className="text-[#fca311]">365</span>
+              Kitchen<span className="text-[#fca311]">365</span>
             </Link>
           </div>
 
           {/* Navigation */}
 
           <nav className="hidden md:flex items-center space-x-8">
-            {token && !isLoginPage ?  (
+            {token ? (
               <button
                 onClick={clearLoginToken}
                 href="/auth/login"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer"
+                className="bg-[#fca311] text-white px-4 py-2 rounded-lg hover:bg-[#e5940f] transition-colors cursor-pointer"
               >
                 Logout
               </button>
-            ) : !isLoginPage && (
+            ) : (
               <Link
                 href="/auth/login"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"

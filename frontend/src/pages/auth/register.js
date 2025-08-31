@@ -47,17 +47,20 @@ export default function Login() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Login - Kitchen365</title>
         <meta name="description" content="Login to your Kitchen365 account" />
-      </Head>
+      </Head> */}
 
       <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           {/* Logo and Header */}
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            {/* <h1 className="text-4xl font-bold text-gray-900 mb-2">
               Kitchen365 Registration
+            </h1> */}
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            Kitchen<span className="text-[#fca311]">365</span> Registration
             </h1>
           </div>
         </div>
@@ -192,7 +195,7 @@ export default function Login() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
+                  className="w-full bg-[#fca311] hover:bg-[#e5940f] flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">
@@ -241,7 +244,7 @@ export default function Login() {
               <div className="mt-6 text-center">
                 <Link
                   href="/auth/login"
-                  className="text-blue-600 hover:text-blue-500 font-medium transition-colors"
+                  className="text-[#fca311] hover:text-[#e5940f] font-medium transition-colors"
                 >
                   Already a User? Login
                 </Link>
@@ -250,16 +253,16 @@ export default function Login() {
           </div>
 
           {/* Demo Credentials */}
-          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h3 className="text-sm font-medium text-blue-800 mb-2">
+          <div className="mt-6 bg-[#fff5e6] border border-[#ffd8a8] rounded-lg p-4">
+            <h3 className="text-sm font-medium text-black mb-2">
               Demo Credentials
             </h3>
-            <div className="text-sm text-blue-700 space-y-1">
+            <div className="text-sm text-[#f76707] space-y-1">
               <p>
-                <strong>Email:</strong> demo@kitchen365.com
+                <strong className="font-semibold" >Email:</strong> demo@kitchen365.com
               </p>
               <p>
-                <strong>Password:</strong> demo123
+                <strong className="font-semibold">Password:</strong> demo123
               </p>
             </div>
           </div>
